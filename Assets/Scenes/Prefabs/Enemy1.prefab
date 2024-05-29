@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5575938182192122032}
   - component: {fileID: 5575938182192122035}
   - component: {fileID: 5575938182192122033}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Enemy1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbb96c02bc2af3346b2906c1702fbe3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 50
 --- !u!212 &5575938182192122032
 SpriteRenderer:
   m_ObjectHideFlags: 0

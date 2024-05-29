@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour
             Bullet.transform.position = this.transform.position;
             if(pressSpaceTime != 0.0f)
             {
-                bulletScale *= pressSpaceTime * 0.1f;
+                bulletScale *= pressSpaceTime * 0.1f;   
                 Bullet.transform.localScale = bulletScale;
             }
 
@@ -72,45 +72,19 @@ public class PlayerController : MonoBehaviour
 
 
 
-
-
-
-
-
-
-
-
-
-
-        //if (Input.GetKeyUp(KeyCode.Space))
+        //if (input.getkeyup(keycode.space))
         //{
-        //    for (int i = -1; i < BulletCount; i++)
+        //    for (int i = -1; i < bulletcount; i++)
         //    {
 
-        //        GameObject Bullet = Instantiate(bulletPrefab);
-        //        Vector3 BulletPos = this.transform.position;
+        //        gameobject bullet = instantiate(bulletprefab);
+        //        vector3 bulletpos = this.transform.position;
 
-        //        BulletPos.y = BulletPos.y + (i * 0.3f);
-        //        Bullet.transform.position = BulletPos;
+        //        bulletpos.y = bulletpos.y + (i * 0.3f);
+        //        bullet.transform.position = bulletpos;
 
-        //        Bullet.GetComponent<Rigidbody2D>().AddForce(Vector2.up * bulletSpeed);
+        //        bullet.getcomponent<rigidbody2d>().addforce(vector2.up * bulletspeed);
         //    }
         //}
     }
-
-    /*
-                while(true)
-                {
-                    switch(direction)
-                    {   
-                        case up : bulletPrefab.transform.Translate(0, speed, 0); break;
-                        case left : bulletPrefab.transform.Translate(-speed, 0, 0); break;
-                        case down : bulletPrefab.transform.Translate(0, -speed, 0); break;
-                        case right : bulletPrefab.transform.Translate(speed, 0, 0); break;
-                    }
-                    if(Input.GetKey(KeyCode.K)) break;
-                }
-            }
-        }
-    */
 }

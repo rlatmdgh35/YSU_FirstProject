@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
 
         if (health <= 0)
             Die();
-    }   
+    }
 
     void Die()
     {
@@ -23,7 +23,6 @@ public class Player : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Enemy"))
         {
-            Debug.Log("Test");
             TakeDamage(10);
             Destroy(collision.gameObject);
         }
