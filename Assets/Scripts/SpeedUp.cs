@@ -2,12 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Coin : Item
+public class SpeedUp : Item, IEffect
 {
     public override void DestroyAfterTime()
     {
+        Invoke("GetOpaque", 3f);
         Invoke("DestroyItem", 5f);
+    }
 
+    public void GetOpaque()
+    {
+        Color32 color = GetComponent<SpriteRenderer>().color;
+        GetComponent<SpriteRenderer>().color = new Color32(color.r, color.g, color.b, 64);
     }
 
     public void DestroyItem()
@@ -19,7 +25,7 @@ public class Coin : Item
     {
         GameObject playerObj = GameObject.Find("Player");
         PlayerController playerCon = playerObj.GetComponent<PlayerController>();
-        playerCon.bulletCount += 2;
+        playerCon.speed *= 2f;
 
         DestroyItem();
     }

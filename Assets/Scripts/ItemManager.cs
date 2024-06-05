@@ -26,7 +26,7 @@ public class ItemManager : MonoBehaviour
     {   
         for(int i = 0; i < ItemCount; i++)
         {
-            GameObject prefabs = ItemPrefab[Random.Range(0, ItemPrefab.Length)];
+            GameObject prefabs = ItemPrefab[Random.Range(0, ItemPrefab.Length - 1)];
             Vector2 pos = points[Random.Range(0, points.Length)].GetPosition();
 
             GameObject obj = Instantiate(prefabs);

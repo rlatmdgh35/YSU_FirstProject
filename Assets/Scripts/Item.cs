@@ -12,3 +12,8 @@ public abstract class Item : MonoBehaviour
         DestroyAfterTime();
     }
 }
+
+public interface IEffect
+{
+    public void GetOpaque();
+}
